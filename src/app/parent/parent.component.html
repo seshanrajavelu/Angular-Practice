@@ -1,0 +1,25 @@
+<div class="body">
+    <div class="container">
+      <h2>Parent Component</h2>
+      <label>Parent input:</label>
+      <input class="form-control" [(ngModel)]="text">
+      <button (click)="sendData()">Send</button>
+      <h3 *ngFor="let a of childmsg" class="child-message">Message from child: {{a}}</h3>
+      <hr>
+      <app-child [parentData]="datatochild" (emitData)="childdata($event)"></app-child>
+      <hr>
+      <h2>View Child</h2>
+      <h3 class="view-child-message">Message from view child: {{viewchilds}}</h3>
+      <hr>
+      <h2>Built-In Pipes</h2>
+      <h4 class="pipe-example">{{title|uppercase}}</h4>
+      <h4 class="pipe-example">{{"lowercase"|lowercase}}</h4>
+      <h4 class="pipe-example">{{6777.8|currency:"usd"}}</h4>
+      <h4 class="pipe-example">{{todaydate|date:"d/M/y"}}</h4>
+      <h2>Custom Pipes</h2>
+      <input [(ngModel)]="num" class="custom-input">
+      <h4 class="pipe-example">{{num|customPipe}}</h4>
+      <h4 class="pipe-example">{{"sakthival"|reversePipe}}</h4>
+    </div>
+  </div>
+  

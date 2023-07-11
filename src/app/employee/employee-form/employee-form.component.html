@@ -1,0 +1,21 @@
+<div class="heading" >Employee Form</div>
+<div class="center">
+    <form (ngSubmit)="submit()" [formGroup]="userForm">
+      <div class="inputbox">
+        <input type="text"  formControlName="make">
+        <span style="margin-left: 50px; color:red;" *ngIf="email && email.touched">*email is not valid</span>
+        <span>Make</span>
+      </div>
+      <div class="inputbox">
+        <input type="text" formControlName="model">
+        <span>Model</span>
+      </div>
+      <div class="inputbox">
+        <input type="number" formControlName="price">
+        <span>Price</span>
+      </div>
+      <div class="inputbox">
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  </div>

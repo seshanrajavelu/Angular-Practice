@@ -1,0 +1,8 @@
+<div class="child-component">
+    <h1>Child Component</h1>
+    <label>Child input:</label>
+    <input type="text" #msg>
+    <button (click)="sendtoparent(msg.value)">Send</button>
+    <h3 *ngFor="let a of parentData">message from parent: {{a}}</h3>
+  </div>
+  

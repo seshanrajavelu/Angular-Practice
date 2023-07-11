@@ -1,0 +1,25 @@
+<div class="center">
+  <h1>Reactive Form</h1>
+  <form (ngSubmit)="submit()" [formGroup]="userForm">
+    <div class="inputbox">
+      <input type="text" formControlName="email">
+      <span class="error" *ngIf="userForm.controls.email.invalid && userForm.controls.email.touched">*Email is not valid</span>
+      <span>Email</span>
+    </div>
+    <div class="inputbox">
+      <input type="text" formControlName="name">
+      <span>Name</span>
+    </div>
+    <div class="inputbox">
+      <input type="number" formControlName="age">
+      <span>Age</span>
+    </div>
+    <div class="inputbox">
+      <input type="password" formControlName="password">
+      <span>Password</span>
+    </div>
+    <div class="inputbox">
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+</div>
